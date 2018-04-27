@@ -8,10 +8,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { XyzErrorHandlerService } from './error-handler.service';
 import { MaterialModule } from './material.module';
+import { HeaderComponent } from './header/header.component';
+import { CurrentComponent } from './current/current.component';
+import { TendayComponent } from './tenday/tenday.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    CurrentComponent,
+    TendayComponent
   ],
   imports: [
     BrowserModule,
