@@ -5,7 +5,9 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { XyzErrorHandlerService } from './error-handler.service';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { XyzErrorHandlerService } from './error-handler.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
     {provide: ErrorHandler, useClass: XyzErrorHandlerService}
