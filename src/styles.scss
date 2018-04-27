@@ -2,6 +2,36 @@
 /* angular material prebuilt CSS theme */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+
+html, body{
+  margin:0;
+  padding:0;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
   }
+  // define variables
+
+$blue: #4285f4;
+$green: #34a853;
+$yellow: #fbbc05;
+$red: #ea4335;
+$dark: rgb(37, 37, 37);
+
+//mixins
+
+@mixin transition {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}

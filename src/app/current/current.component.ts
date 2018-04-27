@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import 'rxjs/Rx';
+
+import { CurrentWeather } from '../current-weather';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-current',
@@ -6,10 +10,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./current.component.scss']
 })
 export class CurrentComponent implements OnInit {
+  myWeather:CurrentWeather;
+  location
 
-  constructor() { }
+  constructor(private ds: DataService) { }
 
   ngOnInit() {
+    
   }
 
 }
