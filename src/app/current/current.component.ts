@@ -26,6 +26,7 @@ export class CurrentComponent implements OnInit {
       this.cw.localWeather(lat, lon).subscribe(
         (data) => {
           console.log(data);
+          //this.myCurrentWeather = new CurrentWeather(data.name, data.main.temp, data.weather[0].icon, data, data, data)
         }
       )
    })

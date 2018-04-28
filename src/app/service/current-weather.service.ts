@@ -12,9 +12,7 @@ export class CurrentWeatherService {
 
   apiKey = '720acc4783a4953d57e7b9a8a3c9edb9';
   url
-  constructor(private http:HttpClient) { 
-    this.url = 'http://api.openweathermap.org/data/2.5/forecast?q='
-  }
+  constructor(private http:HttpClient) {}
 
   weatherNow() {
     return this.current;
@@ -22,8 +20,6 @@ export class CurrentWeatherService {
 
   localWeather(lat:string, lon:string) {
     return this.http.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=720acc4783a4953d57e7b9a8a3c9edb9&units=imperial`)
-      .map((response: Response) => response);
+      .map((response:Response) => response.json());
   }
-
-
 }
