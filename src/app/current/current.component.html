@@ -1,31 +1,14 @@
 <h1>Current Forecast</h1>
 <div class="row">
     <div class="large-6 columns">
-        <h2>Name of City</h2>
-        <h2>Temperature</h2>
-        <h4>Kind of Temperature</h4>
-        <h5>Max</h5>
-        <h5>Min</h5>
+        <button class="primary" mat-raised-button (click)=getDetroit()>Detroit</button>
+        <h3>City Name: {{ myCurrentWeather.cityName }}</h3>
+        <h3>Current Temp: {{ myCurrentWeather.temp }}</h3>
+        <div class="img">
+            <img src="{{ myCurrentWeather.icon }}">
+        </div>
+        <h3>Current Weather: {{ myCurrentWeather.weatherKind }}</h3>
+        <h4>Max Temp: {{ myCurrentWeather.tempMax }}</h4>
+        <h4>Min Temp: {{ myCurrentWeather.tempMin }}</h4>
     </div>
-    <div class="large-6 columns">
-      <h2>Name of City</h2>
-      <h2>Temperature</h2>
-      <h4>Kind of Temperature</h4>
-      <h5>Max</h5>
-      <h5>Min</h5>
-  </div>
-  <div class="large-6 columns">
-    <h2>Name of City</h2>
-    <h2>Temperature</h2>
-    <h4>Kind of Temperature</h4>
-    <h5>Max</h5>
-    <h5>Min</h5>
-  </div>
-  <div class="large-6 columns">
-    <h2>Name of City</h2>
-    <h2>Temperature</h2>
-    <h4>Kind of Temperature</h4>
-    <h5>Max</h5>
-    <h5>Min</h5>
-  </div>
 </div>

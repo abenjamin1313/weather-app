@@ -10,7 +10,7 @@ export class XyzErrorHandlerService extends ErrorHandler {
     handleError(error) {
         let date = new Date();
         
-        console.error('There was an error...', {
+        console.error('Something went wrong. Check Below!!!', {
             timestamp: date.toISOString(),
             message: error.message,
             zone: error.zone,

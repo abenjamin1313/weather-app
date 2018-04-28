@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import 'rxjs/Rx';
-
+import { Http, Response } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { CurrentWeatherService } from '../service/current-weather.service';
 import { CurrentWeather } from '../current-weather';
-import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-current',
@@ -10,13 +10,16 @@ import { DataService } from '../data.service';
   styleUrls: ['./current.component.scss']
 })
 export class CurrentComponent implements OnInit {
-  myWeather:CurrentWeather;
-  location
+  myCurrentWeather:CurrentWeather;
 
-  constructor(private ds: DataService) { }
+  constructor(private cw:CurrentWeatherService, private http: HttpClient) { }
+
+  readonly CITY_URL = 'http://api.wunderground.com/api/f7c5967e5a790c53/geolookup/conditions/q/IA/Cedar_Rapids.json';
+
+  posts: any;
 
   ngOnInit() {
-    
+   this.myCurrentWeather =  this.cw.weatherNow();
   }
 
 }
