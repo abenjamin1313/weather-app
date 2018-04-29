@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TendayComponent implements OnInit {
 
+  title = 'Ten Day Forecast';
+  
   constructor() { }
 
   ngOnInit() {

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/Rx';
-import { CurrentWeather } from './current-weather';
+import { CurrentWeather } from '../current-weather';
 
 @Injectable()
 export class DataService {

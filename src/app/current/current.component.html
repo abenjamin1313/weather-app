@@ -1,31 +1,15 @@
-<h1>Current Forecast</h1>
+<br/>
+<h2>{{ title }}</h2>
+<hr/>
 <div class="row">
     <div class="large-6 columns">
-        <h2>Name of City</h2>
-        <h2>Temperature</h2>
-        <h4>Kind of Temperature</h4>
-        <h5>Max</h5>
-        <h5>Min</h5>
+        <p><strong>City Name:</strong> {{ myCurrentWeather.cityName }}</p>
+        <p><strong>Current Temp:</strong> {{ myCurrentWeather.temp }}</p>
+        <div class="img">
+            <img src="{{ myCurrentWeather.icon }}">
+        </div>
+        <p><strong>Current Weather:</strong> {{ myCurrentWeather.weatherKind }}</p>
+        <p><strong>Max Temp:</strong> {{ myCurrentWeather.tempMax }}</p>
+        <p><strong>Min Temp:</strong> {{ myCurrentWeather.tempMin }}</p>
     </div>
-    <div class="large-6 columns">
-      <h2>Name of City</h2>
-      <h2>Temperature</h2>
-      <h4>Kind of Temperature</h4>
-      <h5>Max</h5>
-      <h5>Min</h5>
-  </div>
-  <div class="large-6 columns">
-    <h2>Name of City</h2>
-    <h2>Temperature</h2>
-    <h4>Kind of Temperature</h4>
-    <h5>Max</h5>
-    <h5>Min</h5>
-  </div>
-  <div class="large-6 columns">
-    <h2>Name of City</h2>
-    <h2>Temperature</h2>
-    <h4>Kind of Temperature</h4>
-    <h5>Max</h5>
-    <h5>Min</h5>
-  </div>
 </div>
