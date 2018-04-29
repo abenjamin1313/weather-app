@@ -8,7 +8,7 @@ import { CurrentWeather } from '../current-weather';
 @Injectable()
 export class CurrentWeatherService {
 
-  private _localURL = 'http://api.openweathermap.org/data/2.5/forecast?q=Auburn%20Hills,US&appid=720acc4783a4953d57e7b9a8a3c9edb9&units=imperial';
+  private _localURL = 'https://api.openweathermap.org/data/2.5/forecast?q=Auburn%20Hills,US&appid=720acc4783a4953d57e7b9a8a3c9edb9&units=imperial';
   data: any = {};
 
   current:CurrentWeather = new CurrentWeather('Detroit', '78', 'http://icons.wxug.com/i/c/k/cloudy.gif',
@@ -26,7 +26,7 @@ export class CurrentWeatherService {
   }
 
   localWeather(lat:string, lon:string) {
-    return this.http.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=720acc4783a4953d57e7b9a8a3c9edb9&units=imperial`)
+    return this.http.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=720acc4783a4953d57e7b9a8a3c9edb9&units=imperial`)
     .map(res => res);
   }
   
