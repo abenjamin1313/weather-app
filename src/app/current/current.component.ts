@@ -11,9 +11,8 @@ import { CurrentWeather } from '../current-weather';
 export class CurrentComponent implements OnInit {
   myCurrentWeather:CurrentWeather;
   location
+  myData: any[] = [];
   constructor(private cw:CurrentWeatherService, private http: HttpClient) { }
-
-  readonly CITY_URL = 'http://api.wunderground.com/api/f7c5967e5a790c53/geolookup/conditions/q/IA/Cedar_Rapids.json';
 
   ngOnInit() {
    this.myCurrentWeather =  this.cw.weatherNow();
@@ -24,12 +23,15 @@ export class CurrentComponent implements OnInit {
       const lat = this.location.latitude;
       const lon = this.location.longitude;
       this.cw.localWeather(lat, lon).subscribe(
-        (data) => {
-          console.log(data);
-          //this.myCurrentWeather = new CurrentWeather(data.name, data.main.temp, data.weather[0].icon, data, data, data)
-        }
-      )
+        (res: any) => {
+          alert("success");
+          this.myData = res.data;
+
+          console.log('res is', res);
+        },
+        error => {
+          alert("error");
+        });
    })
   }
-
 }
