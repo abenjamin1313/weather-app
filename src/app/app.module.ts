@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 // service
 import { XyzErrorHandlerService } from './service/error-handler.service';
-import { CurrentWeatherService } from './service/current-weather.service';
+import { LocalWeatherService } from './service/local-weather.service';
 // Material Design Components
 import { MaterialModule } from './material.module';
 // In App Components
@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { CurrentComponent } from './current/current.component';
 import { TendayComponent } from './tenday/tenday.component';
 import { AboutComponent } from './about/about.component';
+import { DerpPipe } from './derp.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AboutComponent } from './about/about.component';
     HeaderComponent,
     CurrentComponent,
     TendayComponent,
-    AboutComponent
+    AboutComponent,
+    DerpPipe
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,7 @@ import { AboutComponent } from './about/about.component';
     MaterialModule
   ],
   providers: [
-    CurrentWeatherService,
+    LocalWeatherService,
     {provide: ErrorHandler, useClass: XyzErrorHandlerService}
   ],
   bootstrap: [AppComponent]
