@@ -2,14 +2,10 @@
 <h2>{{ title }}</h2>
 <hr/>
 <div class="row">
-    <div *ngFor="let sanFransico of sanFransicos | derp" class="large-6 columns">
-        <p><strong>City Name:</strong> {{ sanFransico.name }}</p>
-        <p><strong>Current Temp:</strong> </p>
-        <div class="img">
-            <img src="">
-        </div>
-        <p><strong>Current Weather:</strong> </p>
-        <p><strong>Max Temp:</strong> </p>
-        <p><strong>Min Temp:</strong> </p>
+    <div *ngFor="let weather of weathers" class="large-6 columns">
+        <p><strong>City Name:</strong> {{ weather.name }}</p>
+        <p><strong>State:</strong> </p>
+        <p><strong>Temp F:</strong> </p>
+        <p><strong>Temp :</strong> </p>
     </div>
 </div>
