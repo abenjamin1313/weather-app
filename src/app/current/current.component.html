@@ -2,8 +2,12 @@
 <h2>{{ title }}</h2>
 <hr/>
 <div class="row">
-    <div *ngFor="let weather of weathers" class="large-6 columns">
-        <p><strong>City Name:</strong> {{ weather.name }}</p>
+    <div *ngFor="let weather of weathers.data" class="large-6 columns">
+        <li *ngFor="let weather of weathers.data">
+                {{ weather.city }}
+        </li>
+        
+        <p><strong>City Name:</strong></p>
         <p><strong>State:</strong> </p>
         <p><strong>Temp F:</strong> </p>
         <p><strong>Temp :</strong> </p>

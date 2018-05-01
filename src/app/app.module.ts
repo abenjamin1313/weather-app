@@ -16,7 +16,6 @@ import { HeaderComponent } from './header/header.component';
 import { CurrentComponent } from './current/current.component';
 import { TendayComponent } from './tenday/tenday.component';
 import { AboutComponent } from './about/about.component';
-import { DerpPipe } from './derp.pipe';
 
 @NgModule({
   declarations: [
@@ -24,8 +23,7 @@ import { DerpPipe } from './derp.pipe';
     HeaderComponent,
     CurrentComponent,
     TendayComponent,
-    AboutComponent,
-    DerpPipe
+    AboutComponent
   ],
   imports: [
     BrowserModule,

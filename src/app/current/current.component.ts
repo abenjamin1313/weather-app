@@ -3,8 +3,6 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import {Observable} from 'rxjs/Rx';
 // service
 import { LocalWeatherService } from '../service/local-weather.service';
-// pipe
-import { DerpPipe } from '../derp.pipe';
 
 @Component({
   selector: 'app-current',

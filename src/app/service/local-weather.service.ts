@@ -25,4 +25,5 @@ export class LocalWeatherService {
   getLocalWeather(): Observable<Weather[]> {
     return this.http.get<Weather[]>(this._sanFran);
   }
+
 }
